@@ -23,7 +23,7 @@ Example:
 When a clone pair is returned, the information in the ByteCodeInfo.csv can now simply be used. 
 Example:
 ```
-default,137166.java,26,28,default,137166.java,50,52,
+default,137166.java,26,28,default,137166.java,50,52
 ```
 Such an output can then be processed by BigCloneEval.
 
