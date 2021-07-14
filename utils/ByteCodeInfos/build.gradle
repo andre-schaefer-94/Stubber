@@ -1,0 +1,39 @@
+apply plugin: 'application'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compile group: 'ca.mcgill.sable', name: 'soot', version: '4.1.0'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+if (project.hasProperty('mainClass')) {
+    mainClassName = project.getProperty('mainClass')
+} else {
+    // use a default
+    mainClassName = 'ByteCodeInfos'
+}
+
+jar {
+    manifest.attributes(
+        'Multi-Release': 'true'
+    )
+    doFirst {
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    manifest {
+        attributes 'Main-Class': 'ByteCodeInfos'
+    }
+}
