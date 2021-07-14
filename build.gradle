@@ -1,0 +1,32 @@
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    compile "org.slf4j:slf4j-simple:1.7.9" 
+    compile group: 'org.eclipse.jdt', name: 'org.eclipse.jdt.core.manipulation', version: '1.13.100'
+}
+
+if (project.hasProperty('mainClass')) {
+    mainClassName = project.getProperty('mainClass')
+} else {
+    // use a default
+    mainClassName = 'Stubber'
+}
+
+jar {
+    manifest.attributes(
+        'Multi-Release': 'true'
+    )
+    doFirst {
+        from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+    manifest {
+        attributes 'Main-Class': 'Stubber'
+    }
+}
