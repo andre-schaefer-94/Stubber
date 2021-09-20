@@ -1,6 +1,5 @@
 
-# Stubber : Compiling Source Code into Bytecode without Dependencies
-for Java Code Clone Detection
+# Stubber : Compiling Source Code into Bytecode without Dependencies for Java Code Clone Detection
 
 Stubber is a tool to create compilable Java files from Java source code files without dependencies. The Stubber tool can make 95% of all Java files compilable in BigCloneBench. Thereby 92.5% of all clones are preserved. Of course, the Stubber tool can also be applied to other Java files.
 
