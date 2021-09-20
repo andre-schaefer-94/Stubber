@@ -35,14 +35,14 @@ if __name__ == '__main__':
                 part2=None
                 if (key1 in dictionary):
                     part1=dictionary[key1]
-                if part1==None:
+                if part1==None and key11 in dictionary:
                     part1=dictionary[key11]
                 if (key2 in dictionary):
                     part2=dictionary[key2]
-                if part2==None:
+                if part2==None and key11 in dictionary:
                     part2=dictionary[key22]
                 if (part1==None or part2==None):
-                    s=""
+                    continue
                 write1=",".join(splittedLine[0:2])+","+part1
                 write2 = ",".join(splittedLine[4:6]) + "," + part2
                 outPutFile.write(write1+","+write2+"\n")

@@ -14,7 +14,7 @@ import org.eclipse.jdt.core.dom.rewrite.ListRewrite;
 
 import org.eclipse.jdt.internal.compiler.impl.CompilerOptions;
 import org.eclipse.jdt.internal.compiler.lookup.BaseTypeBinding;
-import org.eclipse.jdt.internal.core.nd.field.StructDef;
+
 import org.eclipse.jface.text.Document;
 import org.eclipse.text.edits.TextEdit;
 

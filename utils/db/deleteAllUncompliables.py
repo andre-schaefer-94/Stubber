@@ -126,7 +126,7 @@ if __name__ == '__main__':
                     falsePositive=False
                     outPutFile.write(line)
                 line = inputFile.readline()
-    print("Anzahl gelöschter Funktionen " + str(countFunctions))
-    print("Anzahl gelöschter Klone "+str(count))
-    print("Anzahl gelöschter False Positives " + str(countFalsePositive))
-    print("End time: "+str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))+"\n\n")
+    print("Deleted functions:" + str(countFunctions))
+    print("Deleted clones: "+str(count))
+    print("Deleted false-positives " + str(countFalsePositive))
+    print("Time: "+str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))+"\n\n")
