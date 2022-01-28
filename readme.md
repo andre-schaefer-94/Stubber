@@ -40,7 +40,7 @@ There are 5 arguments:
 * -t : Sets the maximum number of threads to be used. Default is 5.
 * -d : Debug mode with more output and only one thread.
 * -k : Keeps the uncompilable files.
-* -s : Copies the compilable stubbed source files outside of the jar. This should be used, if bytecode based clone detection tools and source code based detection tools are to be compared. The Stubber tool also creates a file called "StubbedSourceCodeLines". The file contains a line mapping of the original files and the java files created by the Stubber. 
+* -s : Copies the compilable stubbed source files outside of the jar. This should be used, if bytecode based clone detection tools and source code based detection tools are to be compared. The Stubber tool also creates a file called "[StubbedSourceCodeLines](https://drive.google.com/file/d/1vAC2eNzSepmhjEpz5tOoiiQBcB53uMcj/view?usp=sharing)". The file contains a line mapping of the original files and the java files created by the Stubber. 
 	* The csv file is structured as follows:
 ``` 
 Foldername, Subfolder, Java_file_name, Startline_of_stubbed_java_file, Endline_of_stubbed_java_file, Startline_of_original_java_file, Endline_of_original_java_file
